@@ -1,0 +1,15 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  /* Để 1rem = 10px */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 16px */
+}
+/*# sourceMappingURL=style.css.map */
