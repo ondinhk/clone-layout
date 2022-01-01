@@ -1,0 +1,82 @@
+header{
+    width: 100%;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    .logo{
+        width: 25%;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .menu{
+        width: 50%;
+        @include center();
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                list-style: none;
+                margin: 0 1rem;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 2.5rem;
+                }
+            }
+            li:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .right{
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .icon{
+            @include center();
+            font-size: 2rem;
+            margin: 0 5%;
+            .icon-search{
+                background-color: transparent;
+            }
+            .icon-cart{
+                @include button();
+                background-color: transparent;
+            }
+            .icon-cart:hover{
+                background-color: $button-color-hover;
+            }
+            button{
+                height: 5rem;
+                margin: 0 1rem;
+                border: none;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+        }
+        
+        .login{
+           .btn{
+               @include button();
+               width: 10rem;
+           }
+           .btn-sign-up{
+
+           }
+           .btn-sign-in{
+               color: #F8EDE3;
+               background-color: $button-color;
+           }
+           .btn:hover{
+               cursor: pointer;
+               background-color: $button-color-hover;
+           }
+        }
+    }
+}

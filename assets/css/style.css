@@ -1,21 +1,7 @@
 @charset "UTF-8";
-* {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  /* Để 1rem = 10px */
-  font-size: 62.5%;
-  line-height: 1.6rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* 16px */
-}
-
 header {
   width: 100%;
-  padding: 0 5%;
+  padding: 0 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +15,12 @@ header {
 }
 
 header .logo {
-  width: 20%;
+  width: 25%;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: black;
 }
 
 header .menu {
@@ -65,17 +56,20 @@ header .menu ul li a {
   font-size: 2.5rem;
 }
 
+header .menu ul li:hover {
+  text-decoration: underline;
+}
+
 header .right {
-  width: 30%;
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 header .right .icon {
@@ -92,7 +86,23 @@ header .right .icon {
   margin: 0 5%;
 }
 
+header .right .icon .icon-search {
+  background-color: transparent;
+}
+
+header .right .icon .icon-cart {
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
+header .right .icon .icon-cart:hover {
+  background-color: #798777;
+}
+
 header .right .icon button {
+  height: 5rem;
   margin: 0 1rem;
   border: none;
 }
@@ -102,10 +112,10 @@ header .right .icon button:hover {
 }
 
 header .right .login .btn {
-  width: 10rem;
   height: 5rem;
   border-radius: 1rem;
   border: none;
+  width: 10rem;
 }
 
 header .right .login .btn-sign-in {
@@ -116,5 +126,30 @@ header .right .login .btn-sign-in {
 header .right .login .btn:hover {
   cursor: pointer;
   background-color: #798777;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  /* Để 1rem = 10px */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 16px */
+}
+
+.container {
+  padding: 0 5%;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 /*# sourceMappingURL=style.css.map */

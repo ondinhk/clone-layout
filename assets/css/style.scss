@@ -1,9 +1,6 @@
 @import "variables";
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
+@import "mixin";
+@import "header";
 
 *{
     box-sizing: inherit;
@@ -15,75 +12,18 @@ html{
 	box-sizing: border-box;
     /* 16px */
 }
-// Heacer
-header{
-    width: 100%;
+// Container
+.container{
     padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.8rem;
-    .logo{
-        width: 20%;
+}
+// Slider
+.content{
+    img{
+        max-width: 100%;
+        height: auto;
+        object-fit: fill;
     }
-    .menu{
-        width: 50%;
-        @include center();
-        ul{
-            display: flex;
-            align-items: center;
-            li{
-                list-style: none;
-                margin: 0 1rem;
-                a{
-                    text-decoration: none;
-                    color: black;
-                    font-size: 2.5rem;
-                }
-            }
-        }
-    }
-    .right{
-        width: 30%;
-        @include center();
+    .text{
 
-        .icon{
-            @include center();
-            font-size: 2rem;
-            margin: 0 5%;
-            button{
-                margin: 0 1rem;
-                border: none;
-                .icon-search{
-
-                }
-                .icon-cart{
-
-                }
-            }
-            button:hover{
-                cursor: pointer;
-            }
-        }
-        
-        .login{
-           .btn{
-               width: 10rem;
-               height: 5rem;
-               border-radius: 1rem;
-               border: none;
-           }
-           .btn-sign-up{
-
-           }
-           .btn-sign-in{
-               color: #F8EDE3;
-               background-color: $button-color;
-           }
-           .btn:hover{
-               cursor: pointer;
-               background-color: $button-color-hover;
-           }
-        }
     }
 }
